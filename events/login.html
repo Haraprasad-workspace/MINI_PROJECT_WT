@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login & Register</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #1e1e1e;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #00bfa6;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input {
+      padding: 10px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 6px;
+      background-color: #2c2c2c;
+      color: white;
+    }
+
+    input::placeholder {
+      color: #aaa;
+    }
+
+    button {
+      margin-top: 12px;
+      padding: 12px;
+      background-color: #00bfa6;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #009e8e;
+    }
+
+    .toggle-link {
+      margin-top: 15px;
+      text-align: center;
+      color: #00bfa6;
+      cursor: pointer;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .error {
+      color: #ff4c4c;
+      font-size: 14px;
+      margin-top: -5px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Register Form -->
+    <div id="registerForm">
+      <h2>Register</h2>
+      <form id="register" onsubmit="return validateRegister()">
+        <input type="text" id="name" placeholder="Full Name" required />
+        <input type="text" id="address" placeholder="Address" required />
+        <input type="text" id="mobile" placeholder="Mobile Number" required />
+        <input type="text" id="city" placeholder="City" required />
+        <input type="text" id="state" placeholder="State" required />
+        <input type="email" id="regEmail" placeholder="Email" required />
+        <input type="password" id="regPassword" placeholder="Password (min 6 characters)" required />
+        <div class="error" id="regError"></div>
+        <button type="submit">Register</button>
+      </form>
+      <div class="toggle-link" onclick="toggleForm()">Already have an account? Login</div>
+    </div>
+
+    <!-- Login Form -->
+    <div id="loginForm" class="hidden">
+      <h2>Login</h2>
+      <form id="login" onsubmit="return validateLogin()">
+        <input type="email" id="loginEmail" placeholder="Email" required />
+        <input type="password" id="loginPassword" placeholder="Password" required />
+        <div class="error" id="loginError"></div>
+        <button type="submit">Login</button>
+      </form>
+      <div class="toggle-link" onclick="toggleForm()">Don't have an account? Register</div>
+    </div>
+  </div>
+
+  <script>
+    function toggleForm() {
+      document.getElementById('loginForm').classList.toggle('hidden');
+      document.getElementById('registerForm').classList.toggle('hidden');
+      document.getElementById('regError').innerText = '';
+      document.getElementById('loginError').innerText = '';
+    }
+
+    function validateRegister() {
+      const mobile = document.getElementById('mobile').value.trim();
+      const email = document.getElementById('regEmail').value.trim();
+      const password = document.getElementById('regPassword').value;
+      const errorDiv = document.getElementById('regError');
+      errorDiv.innerText = '';
+
+      if (!/^\d{10}$/.test(mobile)) {
+        errorDiv.innerText = 'Mobile number must be 10 digits.';
+        return false;
+      }
+
+      if (password.length < 6) {
+        errorDiv.innerText = 'Password must be at least 6 characters.';
+        return false;
+      }
+
+     
+
+      // Success → redirect to index.html
+      alert('Registration successful!');
+      window.location.href = '../index.html';
+      return false;
+    }
+
+    function validateLogin() {
+      const email = document.getElementById('loginEmail').value.trim();
+      const password = document.getElementById('loginPassword').value;
+      const errorDiv = document.getElementById('loginError');
+      errorDiv.innerText = '';
+
+      
+
+      if (password === '') {
+        errorDiv.innerText = 'Please enter your password.';
+        return false;
+      }
+
+      // Success → redirect to index.html
+      alert('Login successful!');
+      window.location.href = '../index.html';
+      return false;
+    }
+  </script>
+</body>
+</html>

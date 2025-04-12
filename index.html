@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+
+        header {
+            background-color: #1e1e1e;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #333;
+        }
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        .logo {
+            width: 70px;
+            height: 70px;
+            margin-right: 10px;
+        }
+
+        .menu nav a {
+            color: #f0f0f0;
+            margin-left: 20px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .menu nav a:hover {
+            color: #00bcd4;
+        }
+
+        .events {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .card {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 188, 212, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card h2 {
+            color: #00bcd4;
+            margin-top: 15px;
+        }
+
+        .card p {
+            margin: 10px 0;
+        }
+
+        .link a {
+            display: inline-block;
+            margin-top: 10px;
+            background-color: #00bcd4;
+            color: #121212;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .link a:hover {
+            background-color: #008fa1;
+        }
+
+        .footer {
+            background-color: #1e1e1e;
+            padding: 20px;
+            text-align: center;
+            color: #ccc;
+            border-top: 2px solid #333;
+        }
+
+        .footer a {
+            margin: 0 10px;
+            color: #00bcd4;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .branding {
+            display: flex;
+            align-items: center;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <header>
+            <div class="branding">
+                <img src="events/assets/logo.png" alt="Logo" class="logo">
+                <h1>Utsavya - Event Management System</h1>
+            </div>
+            <div class="menu">
+                <nav>
+                    <a href="#">Home</a>
+                    <a href="events/contact.html">Contact Us</a>
+                    <a href="events/login.html">Login</a>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <div class="events">
+        <div class="card">
+            <img src="events/assets/arijit singh.jpg" alt="arijit singh">
+            <h2>LIVE Arijit Singh Performance</h2>
+            <p>Once in a lifetime moment, experience Arijit Singh live performance</p>
+            <p>Visit here for more details</p>
+            <div class="link">
+                <a href="loading.html?to=events/event1.html">VISIT HERE</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="events/assets/tech.jpg" alt="technology">
+            <h2>TECH CONFERENCE 2025</h2>
+            <p>A global tech conference featuring AI, Blockchain, and Web3 innovations</p>
+            <p>Visit here for more details</p>
+            <div class="link">
+                <a href="loading.html?to=events/event2.html">VISIT HERE</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="events/assets/food carnival.jpg" alt="food carnival">
+            <h2>FOOD CARNIVAL 2025</h2>
+            <p>A celebration of street food, gourmet dishes, and culinary arts</p>
+            <p>Visit here for more details</p>
+            <div class="link">
+                <a href="loading.html?to=events/event3.html">VISIT HERE</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="events/assets/samay raina.jpg" alt="Samay Raina">
+            <h2>SAMAY RAINA Performing Live</h2>
+            <p>Tumble with laughter with Samay and his humour</p>
+            <p>Visit here for more details</p>
+            <div class="link">
+                <a href="loading.html?to=events/event4.html">VISIT HERE</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="events/assets/startup.jpg" alt="startup">
+            <h2>STARTUP PITCH FEST</h2>
+            <p>A platform for entrepreneurs to pitch their startup ideas to investors</p>
+            <div class="link">
+                <a href="loading.html?to=events/event5.html">VISIT HERE</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="events/assets/music fest.jpg" alt="music fest">
+            <h2>Music Fest 2025</h2>
+            <p>A grand music fest featuring live performances from international artists</p>
+            <p>Visit here for more details</p>
+            <div class="link">
+                <a href="loading.html?to=events/event6.html">VISIT HERE</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="events/assets/marathon.jpg" alt="marathon">
+            <h2>MARATHON FOR A CAUSE</h2>
+            <p>A charity marathon supporting underprivileged children's education</p>
+            <p>Visit here for more details</p>
+            <div class="link">
+                <a href="loading.html?to=events/event7.html">VISIT HERE</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>
+            <a href="https://www.instagram.com/">Instagram</a> |
+            <a href="https://www.facebook.com/">Facebook</a> |
+            <a href="https://x.com/?lang=en">Twitter</a>
+        </p>
+        <p>Designed and Developed by Haraprasad Mahapatra</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>/* HTML: <div class="loader"></div> */
+        body{
+            background-color: #121212;
+        }
+        p{
+            margin-top:50px;
+            color:white;
+            font-size:2.2vmin;
+        }
+        .loader {
+            margin-top:45vh;
+            margin-bottom: auto;
+            margin-left: 95vh;
+            margin-right: auto;
+          width: 120px;
+          height: 22px;
+          border-radius: 20px;
+          color: #514b82;
+          border: 2px solid;
+          position: relative;
+        }
+        .loader::before {
+          content: "";
+          position: absolute;
+          margin: 2px;
+          inset: 0 100% 0 0;
+          border-radius: inherit;
+          background: currentColor;
+          animation: l6 2s infinite;
+        }
+        @keyframes l6 {
+            100% {inset:0}
+        }</style>
+</head>
+<body>
+    <div class="loader">
+        <p>Loading the page..</p>
+    </div>
+    <script>
+        // Get destination from URL query (?to=about.html)
+        const params = new URLSearchParams(window.location.search);
+        const destination = params.get("to");
+    
+        // Redirect after 2 seconds
+        setTimeout(() => {
+          if (destination) {
+            window.location.href = destination;
+          } else {
+            window.history.back();
+          }
+        }, 1500); // 1.5 seconds
+      </script>
+    
+</body>
+
+</html>

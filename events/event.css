@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+/* Header Section */
+.header {
+    background-color: #1e1e1e;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #333;
+    flex-wrap: wrap;
+}
+
+.header h1 {
+    font-size: 26px;
+    color: #00bcd4;
+    margin-bottom: 10px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menu a {
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.menu a:hover {
+    color: #00bcd4;
+}
+
+/* Event Container */
+.event-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #1e1e1e;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 12px rgba(0, 188, 212, 0.15);
+}
+
+/* Image Styling */
+.event-img {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Title */
+.event-title {
+    font-size: 2rem;
+    color: #00bcd4;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.branding {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+
+/* Basic Info */
+.event-info {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ccc;
+}
+
+/* Event Details Block */
+.event-details {
+    margin-top: 25px;
+    padding: 20px;
+    background: #262626;
+    border-radius: 10px;
+}
+
+.event-details h3 {
+    color: #00bcd4;
+    margin-bottom: 10px;
+}
+
+.event-details p,
+.event-details li {
+    margin: 8px 0;
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+.event-details strong {
+    color: #00bcd4;
+}
+
+.event-details ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Register Button */
+.btn-register {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+    margin-top: 25px;
+    background-color: #00bcd4;
+    color: #121212;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-register:hover {
+    background-color: #008fa1;
+}
+
+/* Footer */
+.footer {
+    background-color: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+    color: #ccc;
+    border-top: 2px solid #333;
+    margin-top: 40px;
+}
+
+.footer a {
+    color: #00bcd4;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
